@@ -1,0 +1,40 @@
+@font-face {
+    font-family: ranjani;
+    src: url("../fonts/Rinjani.otf");
+}
+@font-face {
+    font-family: futuraM;
+    src: url("../fonts/futura.ttf");
+}
+@font-face {
+    font-family: gilroy;
+    src: url("../fonts/Gilroy-Light.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background: #00000071;
+    font-family: gilroy;
+
+    /* Prevent text selection and long press context menu */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, supported by Chrome, Opera, etc. */
+    -webkit-touch-callout: none; /* Disable callout on long press in Chrome on mobile */
+}
+/* alowed for this element */
+.contactPage .copyEmail {
+    -webkit-user-select: text; /* Safari */
+    -moz-user-select: text;    /* Firefox */
+    -ms-user-select: text;     /* Internet Explorer/Edge */
+    user-select: text;         /* Chrome, Opera, etc. */
+    -webkit-touch-callout: default;  /* Enable callout menu on long press on iOS */
+}
+
+

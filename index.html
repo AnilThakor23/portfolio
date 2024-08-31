@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anil.Thakor</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <!--locomotive js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+   <!-- tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
+   <!-- rimix Icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+     integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css  -->
+     <link rel="stylesheet" href="./stylesheets/index.css" />
+</head>
+<body>
+
+<!-- loading page -->
+
+    <div class="loaderPage hidden fixed  h-screen w-full  uppercase text-bold z-[1000]">
+        <div class="wrapper absolute overflow-hidden  bg-[#EFEFEF] h-full w-full top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 ">
+            <div class="content absolute  w-screen bottom-1/4 flex flex-col lg:flex-row lg:px-10 gap-14 px-3 justify-between">
+                <div class="flex flex-col gap-1 text-[8vmax] ">
+                  <div class="overflow-hidden"> <h5 class="text leading-none">let's</h5> </div>
+                  <div class="overflow-hidden"> <h5 class="text leading-none">create</h5> </div>
+                  <div class="overflow-hidden"> <h5 class="text leading-none">together</h5> </div>
+                </div>
+                <div class="self-end text-[7vmax] overflow-hidden">
+                   <h5 class="text leading-none" id="count">0%</h5>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+      
+<div class="main relative  text-white bg-[#1D1D1D] ">
+    <div class="page1  relative flex flex-col justify-between w-full h-svh bg-[#151515] px-[2vw] md:px-[4.5vw] overflow-hidden">
+        <nav class="relative flex h-[9vh] md:h-[13vh] justify-between items-center px-[2vw] z-[999]">
+                <div class="text-[2vmax] uppercase font-black z-30 flex gap-2 items-center"><img class="h-[2vw] w-[2vw] rounded-full object-cover" src="./images/myImage.webp" alt=""><h2>Anil</h2></div>
+                <!-- menu btn -->
+                <div class="menuBtn z-[30] md:absolute left-1/2 text-[5.5vw] md:text-[1.8vw] h-[5.5vw] md:h-[1.8vw] font-[futuraM] leading-none md:-translate-x-1/2  overflow-hidden">
+                        <div class="menu-close relative">
+                            <h4>menu</h4>
+                            <h4 class="opacity-">close</h4>
+                        </div>
+                </div>
+                
+                <div class="menuContent absolute left-[-2%] lg:left-[0] top-[-100vh] rounded-lg h-[94vh] md:h-[85vh] w-[100vw] md:w-full bg-[#1D1D1D] z-20 flex flex-col justify-end">
+                    
+                    <div class="flex justify-start md:justify-between w-full md:pr-[10vw] px-8">
+                        <div class="hidden md:inline w-[25vw] h-[15vw] bg-red-300 shrink-0 rounded-md overflow-hidden">
+                            <img class="h-full w-full object-cover object-center" src="./images/myImage.webp" alt="">
+                        </div>
+                       <div class="capitalize flex flex-col font-[ranjani] text-[15vw] sm:text-[12vw] md:text-[5.5vw] font-bold leading-[0.9] mb-[5vh] text-[#FF535B]">
+                          <div class="uppercase"> <h4>home</h4> </div>
+                          <div class="uppercase"> <h4>work</h4> </div> 
+                          <div class="uppercase"> <h4>about</h4> </div> 
+                          <div class="uppercase"> <h4>let's talk</h4>  </div>     
+                     </div>
+                   </div>
+                   <div class="flex flex-col md:flex-row w-full justify-between">
+                       <a href="https://www.instagram.com/anil._a_webdeveloper/" class="buttonHover relative overflow-hidden h-[8vh] md:h-[11vh] flex md:justify-center items-center w-full md:w-1/3 pl-[8vw] md:pl-0 border-t-[2px] border-zinc-800 md:border-r-[2px]"> 
+                          <div class="bg1 absolute top-[0%] left-[-100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                          <div class="bg2 absolute top-[0%] left-[100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                          <h5 class="z-[10] mix-blend-difference text-white">instagram</h5>
+                       </a>
+                       <a href="https://www.linkedin.com/in/anil-thakor-830b242b2/" class="buttonHover relative overflow-hidden h-[8vh] md:h-[11vh] flex md:justify-center items-center w-full md:w-1/3 pl-[8vw] md:pl-0 border-t-[2px] border-zinc-800 md:border-r-[2px]"> 
+                           <div class="bg1 absolute top-[0%] left-[-100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                           <div class="bg2 absolute top-[0%] left-[100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                           <h5 class="z-[10] mix-blend-difference text-white">linkedin</h5>
+                       </a>
+                       <a href="https://github.com/AnilThakor23" class="buttonHover relative overflow-hidden h-[8vh] md:h-[11vh] flex md:justify-center items-center w-full md:w-1/3 pl-[8vw] md:pl-0 border-t-[2px] border-zinc-800"> 
+                           <div class="bg1 absolute top-[0%] left-[-100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                           <div class="bg2 absolute top-[0%] left-[100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                           <h5 class="z-[10] mix-blend-difference text-white">mail</h5>
+                       </a>
+                   </div>
+                </div>
+
+                <div class="hidden md:flex uppercase font-[futuraM] text-[1.7vw] flex flex-nowrap z-30">
+                    <h4>pune,</h4>
+                    <h4 class="time-display">02:36pm</h4>
+                </div>
+        </nav>
+        <div class="middle px-[3vw] md:px-[6.5vw] absolute h-[15vh] w-full  top-[40%] left-0 flex flex-col  justify-between items-center  leading-none gap-5 z-10">
+            <div class="md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/3 text-[6vw] md:text-[2vw] uppercase font-bold"> 
+                <h2>web/ui-ux</h2> <h2>developer</h2>
+             </div>
+            <div class="w-full flex flex-col md:flex-row md:justify-between items-center font-semibold text-[4vw] gap-1 md:text-[1.2vw]">
+                <a href="https://www.instagram.com/anil._a_webdeveloper/">@anilthakor</a>
+                <a href="https://www.instagram.com/_._.anil_21._._/">@_._.anil._._</a>
+            </div>
+
+        </div>
+        <div class="bigText h-fit w-full text-nowrap font-[futuraM] flex justify-center md:scale-y-50 md:translate-y-1/4 lg:gap-[2vw]">
+            <h1 class="leading-none tracking-tight font-bold text-[27vw] uppercase text-[#FF535B]">Portfolio</h1>
+        </div>
+    </div>
+
+    <div class="page3  relative w-full h-fit bg-[#EFEFEF] text-black lg:pt-[10vh] pb-2 lg:pb-[10vh] overflow-hidden">
+        <div class="HeadText flex flex-col items-center w-full leading-[0.9] text-[14vw] md:text-[7vw]  text-[#FF535B] font-black uppercase pt-16 pb-16">
+             <div class="overflow-hidden">project</div> 
+             <div class="overflow-hidden">showcase</div>
+       </div>  
+        <div class="content mt-[5vh] ">
+            <div class="elem relative flex justify-between items-center h-[15vh] md:h-[20vh]  px-[5vw] border-b-[1px] border-zinc-500">
+                <!-- anchor tag (link) -->
+                <div class="absolute left-0 w-full h-full bg-[transparent] z-40"></div>
+                <!-- background on hover -->
+                <div class="absolute left-0 w-full h-full overflow-hidden">
+                    <div class="background absolute w-full h-full left-0 top-[100%] bg-white"></div>
+                </div>
+                <!-- number and projectname  -->
+               <div class="flex items-center gap-[2.5vw] md:gap-[4vw] z-10">
+                  <div class="flex font-[ranjani] text-[17vw] md:text-[7vw] h-[11vw] md:h-[4.5vw] leading-[0.6] overflow-hidden"> <span class="relative">0</span> <span class="relative">1</span> </div>
+                  <h2 class="capitalize font-[futuraM] text-[10vw] md:text-[3vw]">premier</h2>
+               </div>
+               <!-- capsule (project image)-->
+               <div class="capsule lg:absolute  shrink-0 left-[45%] h-[50%] lg:h-[200%] w-[35%] lg:w-[50%] rounded-full overflow-hidden lg:opacity-0 z-20 top-[50%] lg:-translate-y-1/2">
+                  <img class="h-full w-full object-cover" src="./images/project-Image1.webp" alt="">
+                </div>
+               <!-- arrow -->
+               <i class="ri-arrow-right-line text-[8vw] md:text-[2.5vw] z-10"></i>
+               
+            </div>
+            <div class="elem relative flex justify-between items-center h-[15vh] md:h-[20vh]  px-[5vw] border-b-[1px] border-zinc-500">
+                <!-- anchor tag (link) -->
+                <div class="absolute left-0 w-full h-full bg-[transparent] z-40"></div>
+                <!-- background on hover -->
+                <div class="absolute left-0 w-full h-full overflow-hidden">
+                    <div class="background absolute w-full h-full left-0 top-[100%] bg-white"></div>
+                </div>
+                <!-- number and projectname  -->
+               <div class="flex items-center gap-[2.5vw] md:gap-[4vw] z-10">
+                  <div class="flex font-[ranjani] text-[17vw] md:text-[7vw] h-[11vw] md:h-[4.5vw] leading-[0.6] overflow-hidden"> <span class="relative">0</span> <span class="relative">2</span> </div>
+                  <h2 class="capitalize font-[futuraM] text-[10vw] md:text-[3vw]">premier</h2>
+               </div>
+                <!-- capsule (project image)-->
+                <div class="capsule lg:absolute shrink-0 left-[45%] h-[50%] lg:h-[200%] w-[35%] lg:w-[50%] rounded-full overflow-hidden lg:opacity-0 z-20 top-[50%] lg:-translate-y-1/2">
+                    <img class="h-full w-full object-cover" src="./images/project-Image2.webp" alt="">
+                  </div>
+                 <!-- arrow -->
+                 <i class="ri-arrow-right-line text-[8vw] md:text-[2.5vw] z-10"></i>
+            </div>
+            <div class="elem relative flex justify-between items-center h-[15vh] md:h-[20vh]  px-[5vw] border-b-[1px] border-zinc-500">
+                <!-- anchor tag (link) -->
+                <div class="absolute left-0 w-full h-full bg-[transparent] z-40"></div>
+                <!-- background on hover -->
+                <div class="absolute left-0 w-full h-full overflow-hidden">
+                    <div class="background absolute w-full h-full left-0 top-[100%] bg-white"></div>
+                </div>
+                <!-- number and projectname  -->
+               <div class="flex items-center gap-[2.5vw] md:gap-[4vw] z-10">
+                  <div class="flex font-[ranjani] text-[17vw] md:text-[7vw] h-[11vw] md:h-[4.5vw] leading-[0.6] overflow-hidden"> <span class="relative">0</span> <span class="relative">3</span> </div>
+                  <h2 class="capitalize font-[futuraM] text-[10vw] md:text-[3vw]">premier</h2>
+               </div>
+                 <!-- capsule (project image)-->
+               <div class="capsule lg:absolute  shrink-0 left-[45%] h-[50%] lg:h-[200%] w-[35%] lg:w-[50%] rounded-full overflow-hidden lg:opacity-0 z-20 top-[50%] lg:-translate-y-1/2">
+                <img class="h-full w-full object-cover" src="./images/project-Image3.webp" alt="">
+              </div>
+               <!-- arrow -->
+                <i class="ri-arrow-right-line text-[8vw] md:text-[2.5vw] z-10"></i>
+            </div>
+            <div class="elem relative flex justify-between items-center h-[15vh] md:h-[20vh]  px-[5vw] border-b-[1px] border-zinc-500">
+                <!-- anchor tag (link) -->
+                <div class="absolute left-0 w-full h-full bg-[transparent] z-40"></div>
+                <!-- background on hover -->
+                <div class="absolute left-0 w-full h-full overflow-hidden">
+                    <div class="background absolute w-full h-full left-0 top-[100%] bg-white"></div>
+                </div>
+                <!-- number and projectname  -->
+               <div class="flex items-center gap-[2.5vw] md:gap-[4vw] z-10">
+                  <div class="flex font-[ranjani] text-[17vw] md:text-[7vw] h-[11vw] md:h-[4.5vw] leading-[0.6] overflow-hidden"> <span class="relative">0</span> <span class="relative">4</span> </div>
+                  <h2 class="capitalize font-[futuraM] text-[10vw] md:text-[3vw]">premier</h2>
+               </div>
+                <!-- capsule (project image)-->
+                <div class="capsule lg:absolute shrink-0 left-[45%] h-[50%] lg:h-[200%] w-[35%] lg:w-[50%] rounded-full overflow-hidden lg:opacity-0 z-20 top-[50%] lg:-translate-y-1/2">
+                  <img class="h-full w-full object-cover" src="./images/project-Image4.webp" alt="">
+                </div>
+                 <!-- arrow -->
+                <i class="ri-arrow-right-line text-[8vw] md:text-[2.5vw] z-10"></i>
+            </div>
+            <div class="elem relative flex justify-between items-center h-[15vh] md:h-[20vh]  px-[5vw] border-b-[1px] border-zinc-500">
+                <!-- anchor tag (link) -->
+                <div class=" absolute left-0 w-full h-full bg-[transparent] z-40"></div>
+                <!-- background on hover -->
+                <div class="absolute left-0 w-full h-full overflow-hidden">
+                    <div class="background absolute w-full h-full left-0 top-[100%] bg-white"></div>
+                </div>
+                <!-- number and projectname  -->
+               <div class="flex items-center gap-[2.5vw] md:gap-[4vw] z-10">
+                  <div class="flex font-[ranjani] text-[17vw] md:text-[7vw] h-[11vw] md:h-[4.5vw] leading-[0.6] overflow-hidden"> <span class="relative">0</span> <span class="relative">5</span> </div>
+                  <h2 class="capitalize font-[futuraM] text-[10vw] md:text-[3vw]">premier</h2>
+               </div>
+                <!-- capsule (project image)-->
+                 <div class="capsule lg:absolute shrink-0 left-[45%] h-[50%] lg:h-[200%] w-[35%] lg:w-[50%] rounded-full overflow-hidden lg:opacity-0 z-20 top-[50%] lg:-translate-y-1/2">
+                   <img class="h-full w-full object-cover" src="./images/project-Image5.webp" alt="">
+                  </div>
+                 <!-- arrow -->
+                 <i class="ri-arrow-right-line text-[8vw] md:text-[2.5vw] z-10"></i>
+             </div>           
+        </div>
+    </div>
+   
+    
+    <!-- <div class="page2  relative h-fit w-full bg-[#EFEFEF] px-[4vw] flex flex-col gap-2 z- text-black lg:pt-[10vh] top-[-1px]">
+        <div class="flex flex-col md:flex-row w-full h-fit pt-[10vh] gap-2">
+             
+            <div class="w-full md:w-1/3 h-[18vh] md:h-[40vh] py-[2vh] md:py-[4vh] px-[5vw] md:px-[2vw] flex flex-row-reverse md:flex-col justify-between bg-[#DCDCDC] rounded-md">
+                <p class="text-sm opacity-30 self-end md:self-start">/ 01</p>
+                <div class="flex flex-col justify-between">
+                    <h3 class="text-[10vw] sm:text-[7vw] md:text-[6vw] font-bold">70+</h3>
+                    <h4 class="w-[40vw] sm:w-[25vw] md:w-[9vw] text-lg sm:text-[2.5vw] md:text-[1.5vw] opacity-70 leading-none">Projects done</h4>
+                </div>
+            </div>
+             
+            <div class="w-full md:w-1/3 h-[18vh] md:h-[40vh] py-[2vh] md:py-[4vh] px-[5vw] md:px-[2vw] flex flex-row-reverse md:flex-col justify-between bg-[#DCDCDC] rounded-md">
+                <p class="text-sm opacity-30 self-end md:self-start">/ 02</p>
+                <div class="flex flex-col justify-between">
+                    <h3 class="text-[10vw] sm:text-[7vw] md:text-[6vw] font-bold">5+</h3>
+                    <h4 class="w-[40vw] sm:w-[25vw] md:w-[9vw] text-lg sm:text-[2.5vw] md:text-[1.5vw] opacity-70 leading-none">Years of experience</h4>
+                </div>
+            </div>
+             
+            <div class="w-full md:w-1/3 h-[18vh] md:h-[40vh] py-[2vh] md:py-[4vh] px-[5vw] md:px-[2vw] flex flex-row-reverse md:flex-col justify-between bg-[#DCDCDC] rounded-md">
+                <p class="text-sm opacity-30 self-end md:self-start">/ 03</p>
+                <div class="flex flex-col justify-between">
+                    <h3 class="text-[10vw] sm:text-[7vw] md:text-[6vw] font-bold">25+</h3>
+                    <h4 class="w-[40vw] sm:w-[25vw] md:w-[8vw] text-lg sm:text-[2.5vw] md:text-[1.5vw] opacity-70 leading-none">Happy clients</h4>
+                </div>
+            </div>
+             
+        </div>
+        <div class="flex flex-col-reverse md:flex-row w-full h-full gap-2 mb-[11vh]">
+             
+            <div class="checkBoxWrapper w-full relative md:w-1/2 h-[30vh] md:h-[40vh] py-[2vh] md:py-[4vh] px-[5vw] flex flex-col justify-center bg-[#DCDCDC] rounded-md gap-[2vh] lg:gap-[4vh]">
+                <p class="absolute text-sm opacity-30 bottom-3 right-3">/ 04</p>
+                <div class="flex items-center gap-[2vmax]"> 
+                     <div class="checkBox border-[2px] border-black relative w-24 md:w-28 md:h-14 rounded-full p-1 flex items-center justify-end bg-black">
+                        <div class="circle absolute left-[56%]  h-9 w-9 md:h-11 md:w-11 bg-[#FF535B] flex justify-center items-center rounded-full"> <i class="ri-thumb-up-line text-lg md:text-xl"></i> </div>
+                        <div class="h-9 w-9 flex justify-center items-center rounded-full"> <i class="ri-thumb-up-line text-lg md:text-xl"></i> </div>
+                    </div>
+                     <div class="text font-semibold  capitalize leading-none text-[4.2vw] md:text-[1.5vw]">Highest Quality</div>
+                </div>
+                <div class="flex items-center gap-[2vmax]"> 
+                    <div class="checkBox border-[2px] border-black relative w-24 md:w-28 md:h-14 rounded-full p-1 flex items-center justify-end bg-black">
+                       <div class="circle absolute left-[56%]  h-9 w-9 md:h-11 md:w-11 bg-[#FF535B] flex justify-center items-center rounded-full"> <i class="ri-time-line text-2xl md:text-2xl"></i> </div>
+                       <div class="h-9 w-9 flex justify-center items-center rounded-full"> <i class="ri-time-line text-2xl md:text-2xl"></i> </div>
+                   </div>
+                    <div class="text font-semibold  capitalize leading-none text-[4.2vw] md:text-[1.5vw]">tight deadline</div>
+                </div>
+                <div class="flex items-center gap-[2vmax]"> 
+                    <div class="checkBox border-[2px] border-black relative w-24 md:w-28 md:h-14 rounded-full p-1 flex items-center justify-end">
+                      <div class="circle absolute left-[3%]  h-9 w-9 md:h-11 md:w-11 bg-black flex justify-center items-center rounded-full"> <i class="ri-money-dollar-circle-line text-2xl"></i> </div>
+                      <div class="h-9 w-9 flex justify-center items-center rounded-full"> <i class="ri-money-dollar-circle-line text-2xl"></i> </div>
+                    </div>
+                  <div class="text font-semibold  capitalize leading-none text-[4.2vw] md:text-[1.5vw]">low cost</div>
+                </div>
+                 
+            </div>
+             
+            <div class="part4 relative w-full md:w-1/2 h-[22vh] md:h-[40vh] py-[2vh] md:py-[4vh] px-[5vw] md:px-[2vw] flex justify-center items-center bg-[#DCDCDC] rounded-md overflow-hidden">
+                <div class="text uppercase text-[6vw] md:text-[3vw] font-bold italic overflow-hidden px-2">Become a client</div>
+                <div class="letsTalk absolute lg:w-[10vw] lg:h-[10vw] w-full h-full top-[100%] lg:top-0 bg-[#4F5BFF] lg:rounded-full flex justify-center items-center lg:scale-0 lg:-translate-y-1/2 lg:-translate-x-1/2">
+                    <div class="flex justify-between items-center lg:w-full px-2 lg:rotate-[-45deg] gap-2"> 
+                        <div class="lg:rotate-[45deg] flex lg:flex-col lg:-translate-y-1/2 lg:pl-5 text-[7vw] lg:text-[1.7vw] leading-none uppercase lg:lowercase gap-2 lg:gap-0 text-white"> <h5>let's</h5> <h5>Talk</h5> </div> 
+                        <i class="ri-arrow-right-line text-white text-[6vw] lg:text-[1.5vw]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+
+
+    <div class="aboutPage  top-[-2px]  relative w-full min-h-screen bg-[#EFEFEF] text-black lg:pt-[20vh] px-[3vw] overflow-hidden">
+         <!-- about me text -->
+        <div class="relative text flex flex-col items-center w-full leading-[0.8] mb-[7vh] lg:mb-[20vh] uppercase">
+            <div class="aboutText text-[14vw] md:text-[7vw]  text-[#FF535B] font-bold overflow-hidden">About Me</div>
+       </div> 
+        <!-- big text -->
+         <div class="text1 flex flex-col md:flex-row md:gap-[5vw] leading-[0.9] flex-wrap md:flex-nowrap font-[gilroy]">
+            <h3 class="text-[10vw] md:text-[12vw] mb-2 md:mb-0 px-1 md:px-0">I'am a</h3>
+            <h2 class="text-[15vw] md:text-[12vw] mb-2 md:mb-0">Freelance</h2>
+        </div>
+        <h1 class="text2 text-[12vw] font-bold leading-[0.9] uppercase text-nowrap md:font-normal">web Developer</h1>
+         <!-- image -->
+         <div class="mt-5 flex gap-4 md:gap-20  flex-col md:flex-row">
+            <div class="w-full h-[30vh] md:w-[45vw] md:h-[50vh] rounded-md overflow-hidden mt-[3vw]"> <img class="h-full w-full object-cover" src="./images/myImage.webp" alt=""></div>
+            <div class="w-full md:w-[30vw] self-start md:self-end text-[4vw] md:text-[1.2vw]">
+                <div class="paragraph font-medium">
+                    My name is Anil Thakor and I am a full-stack
+                     web developer and creative designer based in 
+                     India. I like to build a morden animated websites.
+                      If you want to learn a little more 
+                     about me click the button below.
+                </div>
+                <div class="buttons w-full flex justify-between md:justify-start gap-3  flex-nowrap px-[5vw] md:px-0 font-bold md:font-normal mt-[5vh]">
+                    <div class="relative border-[1px] border-black w-fit px-10 py-3 mt-5 rounded-full overflow-hidden">
+                         <h4>About Me</h4>
+                    </div>
+                    <div class="relative border-[1.5px] border-[#00000070] w-fit capitalize bg-[#4F5BFF] px-10 py-3 mt-5 rounded-full text-white overflow-hidden">
+                        <h4>let's talk</h4>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+         <!-- svg string -->
+        <div class="svgParent hidden lg:flex items-center w-full h-[40vh] px-[4vw] justify-center">
+            <div class="w-full">
+                <svg  width="100%" height="40vh">
+                    <path d="M 0 0 Q 95 10 180 80" stroke="#00000050" stroke-width="1.5" fill="transparent"/>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+   
+
+    
+    <div class="contactPage top-[-3px] relative w-full h-svh bg-[#EFEFEF] text-black flex items-end">
+         <div class="content1 absolute w-full top-[45%] left-[50%] -translate-y-1/2 -translate-x-1/2 leading-none flex flex-col gap-[12vh]">
+            <div class="animationParent relative w-full flex justify-center">
+                <h3 class="text text-[18vw] text-center md:text-[8vw] font-semibold">Let's work together</h3>
+                <div class="copyEmail absolute hidden lg:flex justify-center w-[70%] md:w-[17vw] opacity-0 overflow-hidden text-white bg-black top-[50%] left-[50%] -translate-y-1/2 lg:translate-y-0 -translate-x-1/2 py-4 rounded-full">
+                    <h5 class="uppercase text-nowrap z-10">copy email to clipboard</h5>
+                </div>
+            </div>
+            <div class="w-full flex flex-col items-center gap-[4vh]">
+                <!-- emoji -->
+                <div>
+                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path class="off-sg" 
+                        d="M8.5 4V2H12.5V4H8.5ZM8.5 28V30H12.5V28H8.5ZM10.5 22V24H12.5V22H10.5ZM8.5 20V22H10.5V20H8.5ZM8.5 4H6.5V6H8.5V4ZM6.5 26V28H8.5V26H6.5ZM6.5 6H4.5V8H6.5V6ZM14.5 16V10H10.5V16H14.5ZM22.5 16V10H18.5V16H22.5ZM4.5 24V26H6.5V24H4.5ZM4.5 8H2.5V12H4.5V8ZM4.5 20H2.5V24H4.5V20ZM2.5 12H0.5V20H2.5V12ZM20.5 2V0H12.5V2H20.5ZM20.5 28V30H24.5V28H20.5ZM20.5 24H22.5V22H20.5V24ZM22.5 22H24.5V20H22.5V22ZM24.5 4V2H20.5V4H24.5ZM24.5 28H26.5V26H24.5V28ZM26.5 6V4H24.5V6H26.5ZM26.5 26H28.5V24H26.5V26ZM28.5 8V6H26.5V8H28.5ZM28.5 24H30.5V20H28.5V24ZM28.5 12H30.5V8H28.5V12ZM30.5 12V20H32.5V12H30.5ZM12.5 30V32H20.5V30H12.5ZM12.5 24V26H20.5V24H12.5Z" fill="#0c0c0c"></path> <path class="st0 hover-sg" d="M8.5,4V2h4v2H8.5z M8.5,28v2h4v-2H8.5z M8.5,4h-2v2h2V4z M6.5,26v2h2v-2H6.5z M6.5,6h-2v2h2V6z M14.5,16v-6h-4
+                        v6H14.5z M22.5,16v-6h-4v6H22.5z M4.5,24v2h2v-2H4.5z M4.5,8h-2v4h2V8z M4.5,20h-2v4h2V20z M2.5,12h-2v8h2V12z M20.5,2V0h-8v2H20.5z
+                         M20.5,28v2h4v-2H20.5z M24.5,4V2h-4v2H24.5z M24.5,28h2v-2h-2V28z M26.5,6V4h-2v2H26.5z M26.5,26h2v-2h-2V26z M28.5,8V6h-2v2H28.5z
+                         M28.5,24h2v-4h-2V24z M28.5,12h2V8h-2V12z M30.5,12v8h2v-8H30.5z M12.5,30v2h8v-2H12.5z M18.5,26v-6h-4v6H18.5z"></path> 
+                    </svg>
+                </div>
+                <!-- text -->
+                <div class="flex flex-col items-center gap-1 font-medium">
+                    <h1>Anil.Thakor</h1>
+                    <h4>© 2024</h4>
+                </div>
+            </div>
+         </div>
+         <div class="content2 w-full flex flex-col gap-1 justify-center">
+            <div class="flex flex-col items-end text-[3vw] md:text-[1vw] pr-1">
+                <h5>Designed by me</h5>
+                <h5>Developed by me</h5>
+            </div>
+            <div class="flex flex-row w-full justify-between text-[5vw] md:text-[1.5vw] capitalize">
+                <a href="https://www.instagram.com/anil._a_webdeveloper/" class="buttonHover relative overflow-hidden h-[7vh] md:h-[10vh] flex justify-center items-center w-1/3 border-t-[1px] border-zinc-800 border-r-[1px]"> 
+                    <div class="bg1 absolute top-[0%] left-[-100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                    <div class="bg2 absolute top-[0%] left-[100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                    <h5 class="z-[10] mix-blend-difference text-white">instagram</h5>
+                </a>
+                <a href="https://www.linkedin.com/in/anil-thakor-830b242b2/" class="buttonHover relative overflow-hidden h-[7vh] md:h-[10vh] flex justify-center items-center w-1/3 border-t-[1px] border-zinc-800 border-r-[1px]">
+                    <div class="bg1 absolute top-[0%] left-[-100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                    <div class="bg2 absolute top-[0%] left-[100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                    <h5 class="z-[10] mix-blend-difference text-white">linkedin</h5>
+                </a>
+                <a href="https://github.com/AnilThakor23" class="buttonHover relative overflow-hidden h-[7vh] md:h-[10vh] flex justify-center items-center w-1/3 border-t-[1px] border-zinc-800">
+                    <div class="bg1 absolute top-[0%] left-[-100%] bg-[#DCDCDC] z-0 w-full h-full"></div>
+                    <div class="bg2 absolute top-[0%] left-[100%] bg-[#DCDCDC] z-0 w-full h-full"></div> 
+                    <h5 class="z-[10] mix-blend-difference text-white">github</h5>
+                </a>
+            </div>
+         </div>
+    </div>
+    
+</div>  
+
+
+<!-- ******************************************************************************************** -->
+
+<!-- scrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- gsap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- locomotive js -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<!-- main js -->
+<script src="./javascripts/index.js"></script>    
+</body>
+</html>
