@@ -19,7 +19,6 @@ html , body{
     height: 100%;
     width: 100%;
     background: #00000071;
-    font-family: gilroy;
 
     /* Prevent text selection and long press context menu */
     -webkit-user-select: none; /* Safari */

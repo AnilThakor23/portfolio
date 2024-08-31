@@ -676,10 +676,3 @@ function BreakTextIntoSpans(parameter){
    })
    return element
 }
-
-
-let imagekk = new Image()
-imagekk.src= "./images/1.webp"
-imagekk.onload = () => {
-    console.log("anil bapuuuuuuuu")
-};
