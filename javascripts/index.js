@@ -1,4 +1,57 @@
 var scrollY=0
+
+// TODO: loading Page
+
+function loadingpage() {
+  let tl = gsap.timeline();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const loaderCount = document.querySelector(".loaderPage #count");
+
+    tl.from(".loaderPage .content .text", {
+      y: 100,
+      duration: 0.8,
+      stagger: 0.2,
+    });
+
+    tl.to(
+      {},
+      {
+        delay: 0.8,
+        duration: 0.4, // duration in seconds
+        ease: "none",
+        onUpdate: function () {
+          const progress = Math.round(this.progress() * 10)*10;
+          loaderCount.textContent = `${progress}%`;
+        },
+        onComplete: function () {
+          loaderCount.textContent = "100%";
+          document.querySelector(".loaderPage .wrapper").style.borderRadius =
+            "10px";
+
+          tl.to(".loaderPage .wrapper", {
+            onStart: () => {
+              gsap.to(".loaderPage .content .text", {
+                y: -120,
+                duration: 0.7,
+                stagger: 0.1,
+              });
+            },
+            top: "70%",
+            duration: 1.3,
+            height: "0",
+            ease: "power3.in",
+            width: "85vw",
+            onComplete:()=>{document.querySelector(".loaderPage").style.display="none"},
+          });
+        },
+      }
+    );
+  });
+}
+loadingpage();
+
+// TODO: loco
 function loco() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -62,10 +115,9 @@ function loco() {
   });
 
 }
-loco();
-
+// TODO: page 1
 function page1(){
-  
+  // TODO: menu btn 
       function menu() {
         const btn = document.querySelector(".page1 .menuBtn");
         const menuContent = document.querySelector(".page1 .menuContent");
@@ -107,37 +159,8 @@ function page1(){
     
     menu();
     
-    //  hire me btn animation
-    function page1HoverAnimation(){
-      let btn = document.querySelector(".page1 .hoverAnimation")
-      let textPart1 = document.querySelector(".page1 .hoverAnimation .textPart1")
-      let textPart2 = document.querySelector(".page1 .hoverAnimation .textPart2")
-      let Splited_TextContent = textPart1.textContent.split("")
-      
-      let k = ""
-      Splited_TextContent.forEach((e)=>{k += `<span>${e}</span>`})
-      
-      textPart1.innerHTML=k
-      textPart2.innerHTML=k
-      
-      AllSpans1 = document.querySelectorAll(".page1 .hoverAnimation .textPart1 span")
-      AllSpans2 = document.querySelectorAll(".page1 .hoverAnimation .textPart2 span")
-      AllSpans1.forEach((e)=>{e.style.position = "relative" ;})
-      AllSpans2.forEach((e)=>{e.style.position = "relative" ; e.style.opacity =0 })
-      
-      btn.addEventListener("mouseenter",()=>{
-        gsap.to(AllSpans1,{ top:"-70%" ,stagger:0.015,opacity:0,})
-        gsap.to(".page1 .hoverAnimation .iconPart1",{y:-10 ,opacity:0})
-        gsap.to(AllSpans2,{ top:"-100%",stagger:0.015,opacity:1,})
-        gsap.to(".page1 .hoverAnimation .iconPart2",{y:-20 ,opacity:1,})
-      })
-     btn.addEventListener("mouseleave",()=>{
-       gsap.to(AllSpans1,{ top:"0%" ,stagger:0.015,opacity:1,})
-       gsap.to(".page1 .hoverAnimation .iconPart1",{y:0 ,opacity:1})
-       gsap.to(AllSpans2,{ top:"0%",stagger:0.015,opacity:0,})
-       gsap.to(".page1 .hoverAnimation .iconPart2",{y:0 ,opacity:0})
-      })
-    }
+ // TODO: update time . and locate current time
+
     function updateTime() {
       const timeDisplay = document.querySelector('.page1 nav .time-display');
       const now = new Date();
@@ -162,7 +185,8 @@ function page1(){
   updateTime();
   // Call updateTime every minute (60,000 milliseconds)
   setInterval(updateTime, 60000);
-  
+
+  // TODO: image hover animation on landing (1st page)
 function imageAppearingAnimation() {
   const imagePaths = ["./images/1.webp", "./images/3.webp", "./images/6.webp","./images/7.webp", "./images/8.webp", "./images/9.webp", "./images/10.webp", "./images/11.webp", "./images/12.webp", "./images/13.webp", "./images/14.webp", "./images/15.webp"];
   const images = [];
@@ -284,102 +308,21 @@ function imageAppearingAnimation() {
 
   if(window.innerWidth > 1000){imageAppearingAnimation()}
 
-  }
-  page1()
-  
-
-
-function page2(){
-
-  // checkBox animation
-  let checkBoxes = document.querySelectorAll(".page2 .checkBox");
-  let circles = document.querySelectorAll(".page2 .circle");
-  let checkState = [1, 1, 0];
-
-  function selectBox(index){
-      let tlForSelectBox = gsap.timeline();
-      tlForSelectBox.to(checkBoxes[index], {backgroundColor: "black", duration: 0.05})
-        .to(circles[index], {left: "20%", duration: 0.05})
-        .to(circles[index], {left: "56%", backgroundColor: "#FF525B",  duration: 0.2});
-      checkState[index] = 1;
-
-      let otherIndex = Math.floor(Math.random() * 2) === 0 ? (index + 1) % 3 : (index + 2) % 3;
-      gsap.to(checkBoxes[otherIndex], {backgroundColor: "#DCDCDC", duration: 0.05});
-      gsap.to(circles[otherIndex], {left: "3%", backgroundColor: "black", rotate: "0deg", duration: 0.2});
-      checkState[otherIndex] = 0;
-  }
-
-  function unselectBox(index){
-      gsap.to(checkBoxes[index], {backgroundColor: "#DCDCDC", duration: 0.05});
-      gsap.to(circles[index], {left: "3%", backgroundColor: "black",  duration: 0.2});
-      checkState[index] = 0;
-
-      let otherIndex = checkState[(index + 1) % 3] === 0 ? (index + 1) % 3 : (index + 2) % 3;
-      let tlForUnselectBox = gsap.timeline();
-      tlForUnselectBox.to(checkBoxes[otherIndex], {backgroundColor: "black", duration: 0.05})
-        .to(circles[otherIndex], {left: "20%", duration: 0.05})
-        .to(circles[otherIndex], {left: "56%", backgroundColor: "#FF525B",  duration: 0.2});
-      checkState[otherIndex] = 1;
-  }
-
-  checkBoxes.forEach((box, index) => {
-      box.addEventListener("click", () => {
-          if (checkState[index] === 0) {
-              selectBox(index);
-          } else {
-              unselectBox(index);
-          }
-      });
-  });
-
-/// become a client hover animation on laptop.
-  function pg2HoverAnimation(){
-    let becomeAClient = document.querySelector(".page2 .part4")
-    let circle = document.querySelector(".page2 .part4 .letsTalk")
-    let Rect = becomeAClient.getBoundingClientRect();
-
-   if(window.innerWidth > 900){
-      becomeAClient.addEventListener("mouseenter",(dets)=>{
-        circle.style.top=dets.y - Rect.top + scrollY
-        circle.style.left=dets.x - Rect.left
-        gsap.to(circle,{scale:1,ease:"power2.out"})
-      })
-      becomeAClient.addEventListener("mousemove",(dets)=>{
-        gsap.to(circle,{top: dets.y - Rect.top + scrollY ,left: dets.x - Rect.left})
-      })
-      becomeAClient.addEventListener("mouseleave",(dets)=>{
-        gsap.to(circle,{scale:0,ease:"power2.in"})
-      })
-   }
-   else{
-      becomeAClient.addEventListener("mouseenter",()=>{
-         gsap.to(circle,{top:"0%"})
-      })
-      becomeAClient.addEventListener("mouseleave",(dets)=>{
-        gsap.to(circle,{top:"100%"})
-      })
-   }
-
-    
-  } pg2HoverAnimation() 
-
-   
 }
-// page2();
-
-function page3(){
+// TODO: page2 Page - project Page.
+function page2(){
    
   // heading text animation on start
-  BreakTextIntoSpans(".page3 .HeadText div")
-  // gsap.set(".page3 .HeadText h3 span",{position:"relative"})
-  gsap.from(".page3 .HeadText div span ",{
+  BreakTextIntoSpans(".page2 .HeadText div")
+  // gsap.set(".page2 .HeadText h3 span",{position:"relative"})
+  gsap.from(".page2 .HeadText div span ",{
     duration:1,
     y: 100,
     // transform:"translateY(-50%)",
     ease:"power2.out",
     stagger:0.03,
     scrollTrigger:{
-        trigger:'.page3 .HeadText div',
+        trigger:'.page2 .HeadText div',
         scroller:'.main',
         start:'top: 80%',
     }
@@ -388,7 +331,7 @@ function page3(){
   // capsule type  image animation
   if(window.innerWidth > 900){
 
-    let parents = document.querySelectorAll(".page3 .content .elem") 
+    let parents = document.querySelectorAll(".page2 .content .elem") 
    parents.forEach((el)=>{
     let capsule = el.querySelector(".capsule")
     let image = el.querySelector(".capsule img  ")
@@ -424,8 +367,8 @@ function page3(){
   })
   }
 
-}page3()
-
+}
+// TODO: Contact Page
 function contactPage(){
   let parent = document.querySelector(".contactPage .animationParent")
   let text = document.querySelector(".contactPage .animationParent .text")
@@ -484,9 +427,8 @@ function contactPage(){
  
 
 
-}contactPage()
-
-
+}
+// TODO: About Page
 function aboutPage(){
   // about text animation on start
 
@@ -559,10 +501,8 @@ function aboutPage(){
   }
 
   AboutPageSvgAnimation()
-}aboutPage()
-
-
-
+}
+// TODO: contact page and menu bar  buttons hover animation
 function buttonsHover(){
    let allParents = document.querySelectorAll(".main .buttonHover")
 
@@ -588,74 +528,9 @@ function buttonsHover(){
    })
    
 }
-buttonsHover()
 
 
-
-
-
-
-
-
-
-
-
-
-
-function loadingpage() {
-  let tl = gsap.timeline();
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const loaderCount = document.querySelector(".loaderPage #count");
-
-    tl.from(".loaderPage .content .text", {
-      y: 100,
-      duration: 0.8,
-      stagger: 0.2,
-    });
-
-    tl.to(
-      {},
-      {
-        delay: 0.8,
-        duration: 0.4, // duration in seconds
-        ease: "none",
-        onUpdate: function () {
-          const progress = Math.round(this.progress() * 10)*10;
-          loaderCount.textContent = `${progress}%`;
-        },
-        onComplete: function () {
-          loaderCount.textContent = "100%";
-          document.querySelector(".loaderPage .wrapper").style.borderRadius =
-            "10px";
-
-          tl.to(".loaderPage .wrapper", {
-            onStart: () => {
-              gsap.to(".loaderPage .content .text", {
-                y: -120,
-                duration: 0.7,
-                stagger: 0.1,
-              });
-            },
-            top: "70%",
-            duration: 1.3,
-            height: "0",
-            ease: "power3.in",
-            width: "85vw",
-            onComplete:()=>{document.querySelector(".loaderPage").style.display="none"},
-          });
-        },
-      }
-    );
-  });
-}
-loadingpage();
-
-
-
-
-// tool functions
-
+// TODO: tool functions
 function BreakTextIntoSpans(parameter){
    let element = document.querySelectorAll(parameter)
    element.forEach((elem)=>{
@@ -676,3 +551,14 @@ function BreakTextIntoSpans(parameter){
    })
    return element
 }
+
+
+
+loco();
+page1()
+page2()
+aboutPage()
+contactPage()
+
+// a tool 
+    buttonsHover()
