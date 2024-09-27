@@ -544,10 +544,9 @@ function BreakTextIntoSpans(parameter){
           else{span.style.marginLeft="4vw"}
         }
         span.style.display = "inline-block"
-        console.log(span)
         elem.appendChild(span)
       })
-      console.log(elem)
+   
    })
    return element
 }
